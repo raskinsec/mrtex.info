@@ -10,13 +10,9 @@
         // Detect if the user is using an Android device
         const isAndroid = /Android/i.test(navigator.userAgent);
 
-        // If it's an Android device, dynamically set viewport properties
-        if (isAndroid) {
-            const viewport = document.querySelector("meta[name=viewport]");
-            viewport.setAttribute("content", "width=device-width, initial-scale=1, target-densitydpi=device-dpi");
-        } else {
-            // Display a message for non-Android users
-            document.write("<p>Please use a mobile device to view this site.</p>");
+        // If it's not an Android device, display a message
+        if (!isAndroid) {
+            document.documentElement.innerHTML = "<body style='text-align:center; padding: 20px;'><p>Please use a mobile device to view this site.</p></body>";
         }
     </script>
     <style>
