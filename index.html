@@ -10,9 +10,10 @@
         // Detect if the user is using an Android device
         const isAndroid = /Android/i.test(navigator.userAgent);
 
-        // If it's not an Android device, display a message
+        // If it's not an Android device, show an alert and return 401 status
         if (!isAndroid) {
-            document.documentElement.innerHTML = "<body style='text-align:center; padding: 20px;'><p>Please use a mobile device to view this site.</p></body>";
+            alert("Please use a mobile device to view this site.");
+            window.location.href = "/error401"; // Redirect to a page with 401 status
         }
     </script>
     <style>
