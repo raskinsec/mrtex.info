@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="https://i.ibb.co/KsY7rzp/Picsart-24-01-22-06-30-37-143-removebg.png" type="image/jpeg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>MR Tex</title>
+    <script>
+        // Detect if the user is using an Android device
+        const isAndroid = /Android/i.test(navigator.userAgent);
+
+        // If it's not an Android device, show an alert and return 401 status
+        if (!isAndroid) {
+            alert("Please use a mobile device to view this site.");
+            window.location.href = "/email-us"; // Redirect to a page
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(to right, #3498db, #e74c3c);
+            color: #fff;
+            text-align: center;
+        }
+
+        header {
+            position: relative;
+            overflow: hidden;
+        }
+
+        #top-section {
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+            z-index: 2;
+        }
+
+        #logo-section {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1;
+        }
+
+        #logo-section img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        #welcome-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 13px;
+            z-index: 1;
+        }
+
+        section {
+            padding: 50px 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .product-performance img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        .client-logos img {
+            max-width: 100px;
+            max-height: 50px;
+            margin: 10px;
+        }
+
+        .contact h2,
+        .contact p,
+        .contact a {
+            color: #fff;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media query for smaller screens */
+        @media screen and (max-width: 768px) {
+            #welcome-text {
+                font-size: 11px;
+            }
+
+            #logo-section img {
+                max-width: 53px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div id="top-section">
+            <div id="logo-section">
+                <img src="https://i.ibb.co/KsY7rzp/Picsart-24-01-22-06-30-37-143-removebg.png" alt="MR Tex Logo">
+            </div>
+            <div id="welcome-text">
+                <h1>Welcome to MR Tex</h1>
+            </div>
+        </div>
+    </header>
+
+    <section class="about-us">
+        <h2>About Us</h2>
+        <p>Your Premier Destination for Exceptional Ready-Made Garments. With a wealth of expertise from buying houses, we seamlessly handle a diverse range of products, boast a track record of success with industry giants like MAX and Splash, and guarantee logistics excellence for timely deliveries worldwide <a href="/about-us" id="see-more-button">see more...</a></p>
+    </section>
+
+    <section class="product-performance">
+        <h2>Product Performance</h2>
+        <div>
+            <img src="https://i.ibb.co/hK0Hdhs/Picsart-24-01-22-05-56-31-430.jpg" alt="Product 1">
+            <img src="https://i.ibb.co/Cw7F4DM/ssrco-mhoodie-mens-fafafa-ca443f4786-front-square-product-x600-bg-f8f8f8-1.jpg alt="Product 2">
+            <img src="https://i.ibb.co/MMgLBYT/IMG-20240123-012506.jpg" alt="Product 3">
+            <img src="https://i.ibb.co/CzBgj6D/Innerwear-04.jpg" alt="Product 4">
+
+
+            <!-- Add more images as needed -->
+        </div>
+    </section>
+    <div class="see-more">
+        <a href="/products">View products...</a>
+    </div>
+
+    <section class="clients">
+        <h2>Our Clients</h2>
+        <style>
+  .button-link {
+    display: inline-block;
+    padding: 8px 12px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    background-color: #f0f0f0;
+    text-decoration: none;
+    color: #000;
+    transition: background-color 0.3s ease;
+  }
+
+  .button-link:hover {
+    background-color: #e0e0e0; /* Darker background color on hover */
+  }
+        </style>
+        <div class="client-logos">
+            <!-- Add your client logos with clickable links -->
+            <a href="#"><img src="https://i.ibb.co/82hCKpv/DHM-Composite-Color.png" alt="DHM Composite Color"></a>
+            <a href="#"><img src="https://i.ibb.co/n6Z85HS/logo-buffalo-david-bitton.png" alt="Buffalo David Bitton"></a>
+            <a href="#"><img src="https://i.ibb.co/hm14zym/images.png" alt="Images"></a>
+            <a href="#"><img src="https://i.ibb.co/23TKNZ3/download.png" alt="Download"></a>
+            <!-- Add more logos as needed -->
+        </div>
+        <p><a href="/client" id="see-more-button">and 8 others</a></p>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>We would love to hear from you! Connect with us on <a href="https://wa.me/+8801712548608" class="button-link"><span style="color: #000;">WhatsApp</span></a> or drop us an <a href="mailto:inquiries@mrtex.info" class="button-link"><span style="color: #000;">Email</span></a>.</p>
+        <p>House # 05 (2nd Floor), Road # 18, Sector # 10, Uttara, Dhaka-1230, Bangladesh</p>
+    </section>
+
+</body>
+</html>
