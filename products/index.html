@@ -1,148 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Performance - MR Tex</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background: linear-gradient(to right, #3498db, #e74c3c);
-            color: #fff;
-            text-align: center;
-        }
-
-        header {
-            position: relative;
-            overflow: hidden;
-        }
-
-        #top-section {
-            padding: 20px;
-            color: #fff;
-            text-align: center;
-            z-index: 2;
-        }
-
-        #logo-section {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            z-index: 1;
-        }
-
-        #logo-section img {
-            max-width: 100px;
-            height: auto;
-        }
-
-        #welcome-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 13px;
-            z-index: 1;
-        }
-
-        section {
-            padding: 50px 20px;
-            border-radius: 10px;
-            margin: 20px auto;
-        }
-
-        h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 16px;
-        }
-
-        .product-performance img {
-            max-width: 100%;
-            height: auto;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            margin: 10px;
-        }
-
-        .see-more {
-            margin-top: 20px;
-            color: #fff;
-        }
-
-        /* Media query for smaller screens */
-        @media screen and (max-width: 768px) {
-            #welcome-text {
-                font-size: 11px;
+    <head>
+        <link rel="icon" href="https://i.ibb.co/KsY7rzp/Picsart-24-01-22-06-30-37-143-removebg.png" type="image/jpeg">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <title>Product Performance - MR Tex</title>
+        <script>
+            // Detect if the user is using a desktop device
+            const isDesktop = !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+    
+            // If it's a desktop device, add a class to the body
+            if (isDesktop) {
+                document.body.classList.add('desktop');
             }
-
+        </script>
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                background: linear-gradient(to right, #3498db, #e74c3c);
+                color: #fff;
+                text-align: center;
+            }
+    
+            header {
+                position: relative;
+                overflow: hidden;
+                height: 120px; /* Adjust the height to accommodate the logo */
+            }
+    
+            #top-section {
+                padding: 20px;
+                color: #fff;
+                text-align: center;
+                z-index: 2;
+            }
+    
+            #logo-section {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                z-index: 3; /* Increase the z-index to ensure the logo is above other elements */
+            }
+    
             #logo-section img {
-                max-width: 53px;
+                max-width: 100px;
+                height: auto;
             }
-
+    
+            #welcome-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 13px;
+                z-index: 1;
+            }
+    
+            section {
+                padding: 50px 20px;
+                border-radius: 10px;
+                margin: 20px auto;
+            }
+    
             h2 {
-                font-size: 24px;
+                font-size: 28px;
+                margin-bottom: 20px;
             }
-
+    
             p {
-                font-size: 14px;
+                font-size: 16px;
             }
-        }
-    </style>
-</head>
+    
+            .product-performance {
+                text-align: center;
+            }
+    
+            .product-performance img {
+                width: 200px;
+                height: 200px;
+                border: 2px solid #ddd;
+                border-radius: 5px;
+                margin: 10px;
+                cursor: pointer;
+            }
+    
+            .client-logos img {
+                max-width: 100px;
+                max-height: 50px;
+                margin: 10px;
+            }
+    
+            .contact h2,
+            .contact p,
+            .contact a {
+                color: #fff;
+            }
+    
+            .contact a:hover {
+                text-decoration: underline;
+            }
+    
+            /* Media query for smaller screens */
+            @media screen and (max-width: 768px) {
+                #welcome-text {
+                    font-size: 11px;
+                }
+    
+                #logo-section img {
+                    max-width: 53px;
+                }
+    
+                h2 {
+                    font-size: 24px;
+                }
+    
+                p {
+                    font-size: 14px;
+                }
+    
+                .product-performance img {
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+        </style>
+        <!-- Fancybox CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    </head>
 <body>
 
-    <header>
-        <div id="top-section">
-            <div id="logo-section">
+<header>
+    <div id="top-section">
+        <div id="logo-section">
+            <a href="/">
                 <img src="https://i.ibb.co/KsY7rzp/Picsart-24-01-22-06-30-37-143-removebg.png" alt="MR Tex Logo">
-            </div>
-            <div id="welcome-text">
-                <h1>MR Tex</h1>
-            </div>
+            </a>
         </div>
-    </header>
+        <div id="welcome-text">
+            <h1>MR Tex</h1>
+        </div>
+    </div>
+</header>
 
-    <section class="product-performance">
-        <h2>Product Performance</h2>
-        <!-- Replace the placeholder URLs with your actual product image URLs -->
-        <img src="https://i.ibb.co/Gk88w0Q/Picsart-24-01-22-05-57-25-742.jpg" alt="Product 1">
-        <img src="https://i.ibb.co/FX5nxs4/Picsart-24-01-22-05-57-51-953.jpg" alt="Product 2">
-        <img src="https://i.ibb.co/LCBM87G/Picsart-24-01-22-05-56-59-929.jpg" alt="Product 3">
-        <img src="https://i.ibb.co/cryqvmQ/68-B670-BB-5601-4-AAD-AC66-B8-AAC701-F285.webp" alt="Product 4">
-        <img src="https://i.ibb.co/3BCDnd8/images-1.jpg" alt="Product 5">
-        <img src="https://i.ibb.co/J5jTVnC/f814097e-6bd8-44fb-9d54-11d5c88a0d1a.png" alt="Product 6">
-        <img src="https://i.ibb.co/NNNqX8R/images.jpg" alt="Product 7">
-        <img src="https://i.ibb.co/cwGCK0W/kalenji-dry-men-s-running-breathable-tank-top-white.jpg" alt="Product 8">
-        <!-- Add more images as needed -->
-    </section>
+<section class="product-performance">
+    <h2>Product Performance</h2>
+    <!-- Replace the placeholder URLs with your actual product image URLs -->
+    <a data-fancybox="gallery" href="https://i.ibb.co/Gk88w0Q/Picsart-24-01-22-05-57-25-742.jpg"><img src="https://i.ibb.co/Gk88w0Q/Picsart-24-01-22-05-57-25-742.jpg" alt="Product 1"></a>
+    <a data-fancybox="gallery" href="https://i.ibb.co/FX5nxs4/Picsart-24-01-22-05-57-51-953.jpg"><img src="https://i.ibb.co/FX5nxs4/Picsart-24-01-22-05-57-51-953.jpg" alt="Product 2"></a>
+    <a data-fancybox="gallery" href="https://i.ibb.co/LCBM87G/Picsart-24-01-22-05-56-59-929.jpg"><img src="https://i.ibb.co/LCBM87G/Picsart-24-01-22-05-56-59-929.jpg" alt="Product 3"></a>
+    <a data-fancybox="gallery" href="https://i.ibb.co/cryqvmQ/68-B670-BB-5601-4-AAD-AC66-B8-AAC701-F285.webp"><img src="https://i.ibb.co/cryqvmQ/68-B670-BB-5601-4-AAD-AC66-B8-AAC701-F285.webp" alt="Product 4"></a>
+    <a data-fancybox="gallery" href="https://i.ibb.co/3BCDnd8/images-1.jpg"><img src="https://i.ibb.co/3BCDnd8/images-1.jpg" alt="Product 5"></a>
+    <a data-fancybox="gallery" href="https://i.ibb.co/J5jTVnC/f814097e-6bd8-44fb-9d54-11d5c88a0d1a.png"><img src="https://i.ibb.co/J5jTVnC/f814097e-6bd8-44fb-9d54-11d5c88a0d1a.png" alt="Product 6"></a>
+    <a data-fancybox="gallery" href="https://i.ibb.co/NNNqX8R/images.jpg"><img src="https://i.ibb.co/NNNqX8R/images.jpg" alt="Product 7"></a>
+    <a data-fancybox="gallery" href="https://i.ibb.co/cwGCK0W/kalenji-dry-men-s-running-breathable-tank-top-white.jpg"><img src="https://i.ibb.co/cwGCK0W/kalenji-dry-men-s-running-breathable-tank-top-white.jpg" alt="Product 8"></a>
+    <!-- Add more images as needed -->
+</section>
 
-    <section class="contact">
-        <h2>Contact Us</h2>
-        <style>
-  .button-link {
-    display: inline-block;
-    padding: 8px 12px;
-    border: 1px solid #000;
-    border-radius: 3px;
-    background-color: #f0f0f0;
-    text-decoration: none;
-    color: #000;
-    transition: background-color 0.3s ease;
-  }
+<section class="contact">
+    <h2>Contact Us</h2>
+    <style>
+        .button-link {
+            display: inline-block;
+            padding: 8px 12px;
+            border: 1px solid #000;
+            border-radius: 3px;
+            background-color: #f0f0f0;
+            text-decoration: none;
+            color: #000;
+            transition: background-color 0.3s ease;
+        }
 
-  .button-link:hover {
-    background-color: #e0e0e0; /* Darker background color on hover */
-  }
-        </style>
-        <p>We would love to hear from you! Connect with us on <a href="https://wa.me/+8801712548608" class="button-link"><span style="color: #000;">WhatsApp</span></a> or drop us an <a href="mailto:inquiries@mrtex.info" class="button-link"><span style="color: #000;">Email</span></a>.</p>
-        <p>House # 05 (2nd Floor), Road # 18, Sector # 10, Uttara, Dhaka-1230, Bangladesh</p>
-    </section>
+        .button-link:hover {
+            background-color: #e0e0e0; /* Darker background color on hover */
+        }
+    </style>
+    <p>We would love to hear from you! Connect with us on <a href="https://wa.me/+8801712548608" class="button-link"><span style="color: #000;">WhatsApp</span></a> or drop us an <a href="mailto:inquiries@mrtex.info" class="button-link"><span style="color: #000;">Email</span></a>.</p>
+    <p>House # 05 (2nd Floor), Road # 18, Sector # 10, Uttara, Dhaka-1230, Bangladesh</p>
+</section>
+
+<!-- Fancybox JavaScript -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 </body>
 </html>
