@@ -3,20 +3,16 @@
 <head>
     <link rel="icon" href="https://i.ibb.co/KsY7rzp/Picsart-24-01-22-06-30-37-143-removebg.png" type="image/jpeg">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <title>MR Tex</title>
     <script>
-    // Detect if the user is using a mobile device
-const isMobile = /Android|iPhone/i.test(navigator.userAgent);
+        // Detect if the user is using a desktop device
+        const isDesktop = !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
 
-// If it's not a mobile device, show an alert and redirect
-if (!isMobile) {
-    alert("Please use a mobile device to view this site.");
-    window.location.href = "/email-us"; // Redirect to a page
-} 
-
-
+        // If it's a desktop device, add a class to the body
+        if (isDesktop) {
+            document.body.classList.add('desktop');
+        }
     </script>
     <style>
         body {
@@ -32,6 +28,7 @@ if (!isMobile) {
         header {
             position: relative;
             overflow: hidden;
+            height: 120px; /* Adjust the height to accommodate the logo */
         }
 
         #top-section {
@@ -45,7 +42,7 @@ if (!isMobile) {
             position: absolute;
             top: 10px;
             left: 10px;
-            z-index: 1;
+            z-index: 3; /* Increase the z-index to ensure the logo is above other elements */
         }
 
         #logo-section img {
@@ -77,12 +74,17 @@ if (!isMobile) {
             font-size: 16px;
         }
 
+        .product-performance {
+            text-align: center;
+        }
+
         .product-performance img {
-            max-width: 100%;
-            height: auto;
+            width: 200px;
+            height: 200px;
             border: 2px solid #ddd;
             border-radius: 5px;
             margin: 10px;
+            cursor: pointer;
         }
 
         .client-logos img {
@@ -118,77 +120,87 @@ if (!isMobile) {
             p {
                 font-size: 14px;
             }
+
+            .product-performance img {
+                width: 150px;
+                height: 150px;
+            }
         }
     </style>
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
 </head>
 <body>
 
     <header>
         <div id="top-section">
             <div id="logo-section">
-                <img src="https://i.ibb.co/KsY7rzp/Picsart-24-01-22-06-30-37-143-removebg.png" alt="MR Tex Logo">
+                <a href="/">
+                    <img src="https://i.ibb.co/KsY7rzp/Picsart-24-01-22-06-30-37-143-removebg.png" alt="MR Tex Logo">
+                </a>
             </div>
             <div id="welcome-text">
-                <h1>Welcome to MR Tex</h1>
+                <h1>MR Tex</h1>
             </div>
         </div>
     </header>
 
-    <section class="about-us">
-        <h2>About Us</h2>
-        <p>Your Premier Destination for Exceptional Ready-Made Garments. With a wealth of expertise from buying houses, we seamlessly handle a diverse range of products, boast a track record of success with industry giants like MAX and Splash, and guarantee logistics excellence for timely deliveries worldwide <a href="/about-us" id="see-more-button">see more...</a></p>
-    </section>
+<section class="about-us">
+    <h2>About Us</h2>
+    <p>Your Premier Destination for Exceptional Ready-Made Garments. With a wealth of expertise from buying houses, we seamlessly handle a diverse range of products, boast a track record of success with industry giants like MAX and Splash, and guarantee logistics excellence for timely deliveries worldwide <a href="/about-us" id="see-more-button">see more...</a></p>
+</section>
 
-    <section class="product-performance">
-        <h2>Product Performance</h2>
-        <div>
-            <img src="https://i.ibb.co/hK0Hdhs/Picsart-24-01-22-05-56-31-430.jpg" alt="Product 1">
-            <img src="https://i.ibb.co/Cw7F4DM/ssrco-mhoodie-mens-fafafa-ca443f4786-front-square-product-x600-bg-f8f8f8-1.jpg alt="Product 2">
-            <img src="https://i.ibb.co/MMgLBYT/IMG-20240123-012506.jpg" alt="Product 3">
-            <img src="https://i.ibb.co/CzBgj6D/Innerwear-04.jpg" alt="Product 4">
-
-
-            <!-- Add more images as needed -->
-        </div>
-    </section>
-    <div class="see-more">
-        <a href="/products">View products...</a>
+<section class="product-performance">
+    <h2>Product Performance</h2>
+    <div>
+        <a data-fancybox="gallery" href="https://i.ibb.co/hK0Hdhs/Picsart-24-01-22-05-56-31-430.jpg"><img src="https://i.ibb.co/hK0Hdhs/Picsart-24-01-22-05-56-31-430.jpg" alt="Product 1"></a>
+        <a data-fancybox="gallery" href="https://i.ibb.co/Cw7F4DM/ssrco-mhoodie-mens-fafafa-ca443f4786-front-square-product-x600-bg-f8f8f8-1.jpg"><img src="https://i.ibb.co/Cw7F4DM/ssrco-mhoodie-mens-fafafa-ca443f4786-front-square-product-x600-bg-f8f8f8-1.jpg" alt="Product 2"></a>
+        <a data-fancybox="gallery" href="https://i.ibb.co/MMgLBYT/IMG-20240123-012506.jpg"><img src="https://i.ibb.co/MMgLBYT/IMG-20240123-012506.jpg" alt="Product 3"></a>
+        <a data-fancybox="gallery" href="https://i.ibb.co/CzBgj6D/Innerwear-04.jpg"><img src="https://i.ibb.co/CzBgj6D/Innerwear-04.jpg" alt="Product 4"></a>
     </div>
+</section>
+<div class="see-more">
+    <a href="/products">View products...</a>
+</div>
 
-    <section class="clients">
-        <h2>Previous Collaborations with Renowned Brands</h2>
-        <style>
-  .button-link {
-    display: inline-block;
-    padding: 8px 12px;
-    border: 1px solid #000;
-    border-radius: 3px;
-    background-color: #f0f0f0;
-    text-decoration: none;
-    color: #000;
-    transition: background-color 0.3s ease;
-  }
+<section class="clients">
+    <h2>Previous Collaborations with Renowned Brands</h2>
+    <div class="client-logos">
+        <!-- Add your client logos with clickable links -->
+        <a href="#"><img src="https://i.ibb.co/82hCKpv/DHM-Composite-Color.png" alt="DHM Composite Color"></a>
+        <a href="#"><img src="https://i.ibb.co/n6Z85HS/logo-buffalo-david-bitton.png" alt="Buffalo David Bitton"></a>
+        <a href="#"><img src="https://i.ibb.co/hm14zym/images.png" alt="Images"></a>
+        <a href="#"><img src="https://i.ibb.co/23TKNZ3/download.png" alt="Download"></a>
+        <!-- Add more logos as needed -->
+    </div>
+    <p><a href="/client" id="see-more-button">and 8 others</a></p>
+</section>
 
-  .button-link:hover {
-    background-color: #e0e0e0; /* Darker background color on hover */
-  }
-        </style>
-        <div class="client-logos">
-            <!-- Add your client logos with clickable links -->
-            <a href="#"><img src="https://i.ibb.co/82hCKpv/DHM-Composite-Color.png" alt="DHM Composite Color"></a>
-            <a href="#"><img src="https://i.ibb.co/n6Z85HS/logo-buffalo-david-bitton.png" alt="Buffalo David Bitton"></a>
-            <a href="#"><img src="https://i.ibb.co/hm14zym/images.png" alt="Images"></a>
-            <a href="#"><img src="https://i.ibb.co/23TKNZ3/download.png" alt="Download"></a>
-            <!-- Add more logos as needed -->
-        </div>
-        <p><a href="/client" id="see-more-button">and 8 others</a></p>
-    </section>
+<section class="contact">
+    <h2>Contact Us</h2>
+    <style>
+        .button-link {
+            display: inline-block;
+            padding: 8px 12px;
+            border: 1px solid #000;
+            border-radius: 3px;
+            background-color: #f0f0f0;
+            text-decoration: none;
+            color: #000;
+            transition: background-color 0.3s ease;
+        }
 
-    <section class="contact">
-        <h2>Contact Us</h2>
-        <p>We would love to hear from you! Connect with us on <a href="https://wa.me/+8801712548608" class="button-link"><span style="color: #000;">WhatsApp</span></a> or drop us an <a href="mailto:inquiries@mrtex.info" class="button-link"><span style="color: #000;">Email</span></a>.</p>
-        <p>House # 05 (2nd Floor), Road # 18, Sector # 10, Uttara, Dhaka-1230, Bangladesh</p>
-    </section>
+        .button-link:hover {
+            background-color: #e0e0e0; /* Darker background color on hover */
+        }
+    </style>
+    <p>We would love to hear from you! Connect with us on <a href="https://wa.me/+8801712548608" class="button-link"><span style="color: #000;">WhatsApp</span></a> or drop us an <a href="mailto:inquiries@mrtex.info" class="button-link"><span style="color: #000;">Email</span></a>.</p>
+    <p>House # 05 (2nd Floor), Road # 18, Sector # 10, Uttara, Dhaka-1230, Bangladesh</p>
+</section>
+
+<!-- Fancybox JavaScript -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
 </body>
 </html>
