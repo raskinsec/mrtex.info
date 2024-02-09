@@ -7,14 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <title>MR Tex</title>
     <script>
-        // Detect if the user is using an Android device
-        const isAndroid = /Android/i.test(navigator.userAgent);
+    // Detect if the user is using a mobile device
+const isMobile = /Android|iPhone/i.test(navigator.userAgent);
 
-        // If it's not an Android device, show an alert and return 401 status
-        if (!isAndroid) {
-            alert("Please use a mobile device to view this site.");
-            window.location.href = "/email-us"; // Redirect to a page
-        }
+// If it's not a mobile device, show an alert and redirect
+if (!isMobile) {
+    alert("Please use a mobile device to view this site.");
+    window.location.href = "/email-us"; // Redirect to a page
+} 
+
+
     </script>
     <style>
         body {
