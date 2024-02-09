@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="https://i.ibb.co/KsY7rzp/Picsart-24-01-22-06-30-37-143-removebg.png" type="image/jpeg">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <title>Previous Collaborations with Renowned Brands - MR Tex</title>
+    <script>
+        // Detect if the user is using a desktop device
+        const isDesktop = !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+
+        // If it's a desktop device, add a class to the body
+        if (isDesktop) {
+            document.body.classList.add('desktop');
+        }
+    </script>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -18,6 +28,7 @@
         header {
             position: relative;
             overflow: hidden;
+            height: 120px; /* Adjust the height to accommodate the logo */
         }
 
         #top-section {
@@ -31,7 +42,7 @@
             position: absolute;
             top: 10px;
             left: 10px;
-            z-index: 1;
+            z-index: 3; /* Increase the z-index to ensure the logo is above other elements */
         }
 
         #logo-section img {
@@ -63,15 +74,33 @@
             font-size: 16px;
         }
 
+        .product-performance {
+            text-align: center;
+        }
+
+        .product-performance img {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
         .client-logos img {
             max-width: 100px;
             max-height: 50px;
             margin: 10px;
         }
 
-        .see-more {
-            margin-top: 20px;
+        .contact h2,
+        .contact p,
+        .contact a {
             color: #fff;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
         }
 
         /* Media query for smaller screens */
@@ -91,15 +120,21 @@
             p {
                 font-size: 14px;
             }
+
+            .product-performance img {
+                width: 150px;
+                height: 150px;
+            }
         }
     </style>
 </head>
 <body>
-
     <header>
         <div id="top-section">
             <div id="logo-section">
-                <img src="https://i.ibb.co/KsY7rzp/Picsart-24-01-22-06-30-37-143-removebg.png" alt="MR Tex Logo">
+                <a href="/">
+                    <img src="https://i.ibb.co/KsY7rzp/Picsart-24-01-22-06-30-37-143-removebg.png" alt="MR Tex Logo">
+                </a>
             </div>
             <div id="welcome-text">
                 <h1>MR Tex</h1>
